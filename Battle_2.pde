@@ -6,6 +6,7 @@ void setup()
   fullScreen();
   k=new Kaelthas();
   m=new li_Ming();
+ 
 }
 
 
@@ -13,7 +14,7 @@ void setup()
 void draw()
 {  
   
-
+   background(0);
    k.display();
    k.Move();
    k.attack();
@@ -25,4 +26,23 @@ void draw()
     
 
 
+}
+
+void keyTyped()
+{
+  if (keyPressed)
+  {
+    if (key == 'k')
+    {
+      k.moveSkill();
+    
+    }
+    
+    if (key == 'x')
+    {
+      m.moveSkill();
+    }
+  }
+  
+  
 }

@@ -16,7 +16,7 @@ class Kaelthas
     Kaelthas = loadImage("Kaelthas.png");
     Pyroblast = loadImage("Pyroblast.png");
     x=1300;
-    
+    pyroY = -100;
     
     
     
@@ -26,12 +26,9 @@ class Kaelthas
   void display()
   {
     image(Kaelthas,x,y);
-    
+   
   }
 
-    
-  
-    
   
   
   
@@ -60,12 +57,12 @@ class Kaelthas
   
   void attack()
   {
-    if(keyPressed)
-    {
-      if(key == 'k')
-      {
-        image(Pyroblast, pyroX, pyroY);
-      }
-    }
+     image(Pyroblast, pyroX, pyroY);
+     pyroX -= 5;
   }
+  
+  void moveSkill()
+  {
+    pyroX = x;
+    pyroY = y;  }
 }

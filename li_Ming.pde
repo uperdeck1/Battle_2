@@ -15,7 +15,7 @@ class li_Ming
     speed=20;
     li_Ming = loadImage("Li ming.png");
     ArcaneOrb = loadImage("Arcane Orb.png");
-    
+    orbY = -100;
     
   }
   
@@ -51,10 +51,15 @@ class li_Ming
   
   void attack()
   {
-    if(keyPressed)
-    {
-      if (key == 'x')
-      image(ArcaneOrb, orbX, orbY);
-    }
+   
+    orbX += 5;
+    image(ArcaneOrb, orbX, orbY);
+   
+  }
+  void moveSkill()
+  {
+    orbX = x;
+    orbY = y;
+    
   }
 }
