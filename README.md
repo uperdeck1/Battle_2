@@ -17,8 +17,7 @@
 
 <p>
   <h3>Milestone #2: May 2nd, 2015 </h3>
-  <strong>Goal:</strong> You should have a small prototype by the end of this milestone.
-  <ul>
+  <strong>Goal:</strong> Inserting skills for each of the heroes.   <ul>
     <li>first task : who is doing it (if in team)</li>
   </ul>
 </p>

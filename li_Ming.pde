@@ -1,47 +1,60 @@
-class li Ming
+class li_Ming
 {
-  PImage li Ming; 
+  PImage li_Ming;
+  PImage ArcaneOrb;
   int x;
   int y;
   int speed;
+  int orbX;
+  int orbY;
   
   
   
-  li Ming()
+  li_Ming()
   {
     speed=20;
-    Kaelthas = loadImage("Kaelthas.png");
-    
+    li_Ming = loadImage("Li ming.png");
+    ArcaneOrb = loadImage("Arcane Orb.png");
     
     
   }
   
   void display()
   {
-    image(Kaelthas,x,y);
+    image(li_Ming,x,y);
+    
     
   }
   
   void Move()
   {
     if (keyPressed)
-  {
-    if (keyCode == LEFT)
     {
-     x-=speed;
+      if (key == 'a')
+      {
+       x-=speed;
+      }
+      if (key == 's')
+      {
+        y+=speed;
+      }
+      if (key == 'd')
+      {
+        x+=speed;
+      }    
+      if (key == 'w')   
+      {
+        y-=speed;
+      }
     }
-   if (keyCode == DOWN)
-   {
-     y+=speed;
-   }
-   if (keyCode == RIGHT)
-   {
-     x+=speed;
-   }    
-   if (keyCode == UP)   
-   {
-     y-=speed;
   }
+  
+  void attack()
+  {
+    if(keyPressed)
+    {
+      if (key == 'x')
+      image(ArcaneOrb, orbX, orbY);
+    }
   }
-}
 }
