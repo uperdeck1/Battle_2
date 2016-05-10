@@ -1,12 +1,16 @@
 li_Ming m;
 Kaelthas k;
 
+PImage HOTS_MAP; 
+
 void setup()
 {
   fullScreen();
   k=new Kaelthas();
   m=new li_Ming();
- 
+  HOTS_MAP = loadImage("HOTS MAP.png");
+  HOTS_MAP.resize(width,height);
+  background(HOTS_MAP);
 }
 
 
@@ -14,14 +18,14 @@ void setup()
 void draw()
 {  
   
-   background(0);
+   background(HOTS_MAP);
    k.display();
    k.Move();
    k.attack();
    m.display();
    m.Move();
    m.attack();
-   
+   //HOTS_MAP = loadImage("HOTS MAP.png");
   
     
 

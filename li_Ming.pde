@@ -32,10 +32,12 @@ class li_Ming
     {
       if (key == 'a')
       {
+       if(x-speed >= 0)
        x-=speed;
       }
       if (key == 's')
       {
+        if((y+li_Ming.height)+speed <= height)
         y+=speed;
       }
       if (key == 'd')
@@ -44,6 +46,7 @@ class li_Ming
       }    
       if (key == 'w')   
       {
+        if(y-speed >= 0)
         y-=speed;
       }
     }
@@ -52,7 +55,7 @@ class li_Ming
   void attack()
   {
    
-    orbX += 5;
+    orbX += 20;
     image(ArcaneOrb, orbX, orbY);
    
   }

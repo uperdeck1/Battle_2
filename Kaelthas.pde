@@ -42,14 +42,17 @@ class Kaelthas
       }
       if (keyCode == DOWN)
       {
+        if((y+Kaelthas.height)+speed <= height)
         y+=speed;
       }
       if (keyCode == RIGHT)
       {
+        if((x+Kaelthas.width)+speed <= width)
         x+=speed;
       }    
       if (keyCode == UP)   
       {
+        if(y-speed >= 0)
         y-=speed;
       }
     }
@@ -58,7 +61,7 @@ class Kaelthas
   void attack()
   {
      image(Pyroblast, pyroX, pyroY);
-     pyroX -= 5;
+     pyroX -= 20;
   }
   
   void moveSkill()
