@@ -9,7 +9,7 @@ class li_Ming
   int orbY;
   int health; 
 
-
+  
 
   li_Ming()
   {
@@ -18,6 +18,7 @@ class li_Ming
     ArcaneOrb = loadImage("Arcane Orb.png");
     orbY = -100;
     health = 500;
+    y=400;
   }
 
 

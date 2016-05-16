@@ -16,6 +16,7 @@ class Kaelthas
     Kaelthas = loadImage("Kaelthas.png");
     Pyroblast = loadImage("Pyroblast.png");
     x=1300;
+    y=400;
     pyroY = -100;
     health = 500;
   }
@@ -52,6 +53,7 @@ class Kaelthas
     }
     if (right)
     {
+      if (x+Kaelthas.width+speed <= width)
       x+=speed;
     }    
     if (up)   
